@@ -389,6 +389,39 @@ ul {
 .i118 {
   grid-area: i118;
 }
+.non-metals-box {
+  grid-area: nm;
+}
+.semimetals-box {
+  grid-area: s;
+}
+.semimetals-box {
+  grid-area: s;
+}
+.pTMetals-box {
+  grid-area: pt;
+}
+.transitionMetals-box{
+  grid-area: tm;
+}
+.lanthanides-box{
+  grid-area: l;
+}
+.actinides-box{
+  grid-area: a;
+}
+.alkaliMetals-box{
+  grid-area: am;
+}
+.alkalineEarthMetals-box{
+  grid-area: aem;
+}
+.halogens-box{
+  grid-area: h;
+}
+.nobleGases-box{
+  grid-area: ng;
+}
 #periodic {
   max-height: 100%;
   margin: 5% auto 0;
@@ -444,6 +477,7 @@ ul {
   width: 100%;
 }
 .main-title {
+  margin-top: 20px;
   color: #8c04a8;
   font-size: 30px;
   line-height: 30px;
@@ -521,10 +555,14 @@ ul {
   display: none;
   width: 30px;
   height: 30px;
-  position: absolute;
-  top: 1%;
+  padding: 5px;
+  position: fixed;
+  bottom: 2%;
   right: 2%;
   cursor: pointer;
+  background: #cd90da;
+  border-radius: 8px;
+  z-index: 10;
 }
 #page-main .menu {
   display: block;
@@ -542,7 +580,7 @@ ul {
   content: url("remove-button.svg");
 }
 .nav-top {
-  padding: 0 5px;
+  padding: 20px 5px;
   display: flex;
   justify-content: space-between;
 }
@@ -629,149 +667,93 @@ section.content {
 }
 @media screen and (max-width: 992px) { 
   #periodic {
+    display: block;
+    padding: 0 20px;
+  }
+  .i0,.i119 {
     display: none;
   }
-}
-/* @media screen and (max-width: 992px) {
-  #periodic {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:unset;
+  .group-el {
+    padding-top: 27px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .non-metals-box::before {
+    content: 'Неметаллы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .semimetals-box::before {
+    content: 'Полуметаллы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .pTMetals-box::before {
+    content: 'Постпереходные металлы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .transitionMetals-box::before {
+    content: 'Переходные металлы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .lanthanides-box::before {
+    content: 'Лантаноиды';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .actinides-box::before {
+    content: 'Актиноиды';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .alkaliMetals-box::before {
+    content: 'Щелочные металлы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .alkalineEarthMetals-box::before {
+    content: 'Щёлочноземельные металлы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .halogens-box::before {
+    content: 'Галогены';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+  }
+  .nobleGases-box::before {
+    content: 'Благородные газы';
+    position: absolute;
+    top: 0;
+    font-size: 16px;
   }
   .item {
     width: 50px;
     height: 50px;
     border: 1px solid #000;
+    margin: 0 5px 5px 0;
   }
-  .i1,
-  .i2,
-  .i3,
-  .i4,
-  .i5,
-  .i6,
-  .i7,
-  .i8,
-  .i9,
-  .i10,
-  .i11,
-  .i12,
-  .i13,
-  .i14,
-  .i15,
-  .i16,
-  .i17,
-  .i18,
-  .i19,
-  .i20,
-  .i21,
-  .i22,
-  .i23,
-  .i24,
-  .i25,
-  .i26,
-  .i27,
-  .i28,
-  .i29,
-  .i30,
-  .i31,
-  .i32,
-  .i33,
-  .i34,
-  .i35,
-  .i36,
-  .i37,
-  .i38,
-  .i39,
-  .i40,
-  .i41,
-  .i42,
-  .i43,
-  .i44,
-  .i45,
-  .i46,
-  .i47,
-  .i48,
-  .i49,
-  .i50,
-  .i51,
-  .i52,
-  .i53,
-  .i54,
-  .i55,
-  .i56,
-  .i57,
-  .i58,
-  .i59,
-  .i60,
-  .i61,
-  .i62,
-  .i63,
-  .i64,
-  .i65,
-  .i66,
-  .i67,
-  .i68,
-  .i69,
-  .i70,
-  .i71,
-  .i72,
-  .i73,
-  .i74,
-  .i75,
-  .i76,
-  .i77,
-  .i78,
-  .i79,
-  .i80,
-  .i81,
-  .i82,
-  .i83,
-  .i84,
-  .i85,
-  .i86,
-  .i87,
-  .i88,
-  .i89,
-  .i90,
-  .i91,
-  .i92,
-  .i93,
-  .i94,
-  .i95,
-  .i96,
-  .i97,
-  .i98,
-  .i99,
-  .i100,
-  .i101,
-  .i102,
-  .i103,
-  .i104,
-  .i105,
-  .i106,
-  .i107,
-  .i108,
-  .i109,
-  .i110,
-  .i111,
-  .i112,
-  .i113,
-  .i114,
-  .i115,
-  .i116,
-  .i117,
-  .i118 {
-    grid-area: auto;
-  }
-} */
+}
+  
+  
 @media screen and (max-width: 768px) {
   section.content {
     max-width: 500px;
     width: auto;
     margin-left: 3%;
-    padding-top: 3%;
+    padding: 3% 10px 0;
     transition: all 0.5s;
   }
   .content-activ {

@@ -7,9 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="page-directory">
+    <div class="menu">
+        <svg viewBox="0 0 100 80" width="30" height="30">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+        </svg>
+    </div>
     <nav class="nav-list">
-        <div class="nav-list-h">Аналитическая химия</div>
-        <ul>
+        <div class="nav-top">
+            <div class="nav-list-h">Аналитическая химия</div>
+            <div class="btn-remove"></div>
+        </div>
+        <ul class="nav-links">
             <li>
                 <a href="index.html">Главная</a>
             </li>
@@ -86,6 +96,7 @@
         
 
     </section><!-- section.content -->
-
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="script.js"></script>
     </body><!-- .page-directory -->
 </html>
