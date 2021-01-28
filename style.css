@@ -649,6 +649,43 @@ section.content {
   font-size: 16px;
 }
 /* End item */
+/* Modal */
+.modal {
+  display: none;
+  width: 100%;
+	height: 100%;
+	position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.281);
+}
+.modal-box {
+  max-width: 650px;
+  max-height: 600px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  font-size: 25px;
+  line-height: 33px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+.active {
+  display: block;
+  z-index: 10;
+}
+.exit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 22px;
+  height: 22px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIuMDAxIDUxMi4wMDEiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCA1MTIuMDAxIDUxMi4wMDEiIHdpZHRoPSIyMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJtNTEyLjAwMSA4NC44NTMtODQuODUzLTg0Ljg1My0xNzEuMTQ3IDE3MS4xNDctMTcxLjE0OC0xNzEuMTQ3LTg0Ljg1MyA4NC44NTMgMTcxLjE0OCAxNzEuMTQ3LTE3MS4xNDggMTcxLjE0OCA4NC44NTMgODQuODUzIDE3MS4xNDgtMTcxLjE0NyAxNzEuMTQ3IDE3MS4xNDcgODQuODUzLTg0Ljg1My0xNzEuMTQ4LTE3MS4xNDh6Ii8+PC9nPjwvc3ZnPg==");
+}
+/* End Modal */
 @media screen and (max-width: 1200px) {
   .nav-list {
     width: 25%;
@@ -749,6 +786,12 @@ section.content {
   
   
 @media screen and (max-width: 768px) {
+  .modal-box {
+    width: 100vw;
+    max-width: 86%;
+    font-size: 20px;
+    line-height: 25px;
+  }
   section.content {
     max-width: 500px;
     width: auto;
