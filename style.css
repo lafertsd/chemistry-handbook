@@ -16,6 +16,9 @@
 a {
   text-decoration: none;
 }
+body.active {
+  overflow: hidden;
+}
 ul {
   list-style: none;
 }
@@ -584,9 +587,9 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.nav-list ul,
+
 .nav-list ul li {
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 .nav-list ul li a {
   display: block;
@@ -596,6 +599,7 @@ ul {
   text-align: center;
 
   text-decoration: none;
+  color: #000;
 }
 .nav-list-h {
   font-size: 20px;
